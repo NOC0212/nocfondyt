@@ -1,46 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test Website</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 10px 0;
-            text-align: center;
-        }
-        main {
-            padding: 20px;
-        }
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-    </style>
+    <title>YT風城_Noc測試網站測試網站</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Welcome to the Test Website</h1>
+        <h1>風城_Noc 的 CODM 空間</h1>
     </header>
+
+    <section class="stats-overview">
+        <div class="stat-item">
+            <h2>訂閱人數</h2>
+            <p class="stat-number">78</p>
+        </div>
+        <div class="stat-item">
+            <h2>影片數量</h2>
+            <p class="stat-number">52</p>
+        </div>
+        <div class="stat-item">
+            <h2>觀看次數觀看次數</h2>
+            <p class="stat-number">18658</p>
+        </div>
+    </section>
+    
     <main>
-        <h2>About This Site</h2>
-        <p>This is a simple test website created to demonstrate basic HTML and CSS.</p>
+        <section class="announcement">
+            <h2>📢 最新公告</h2>
+            <p>此網站正在開發階段，請留意</p>
+        </section>
+
+        <section class="videos">
+            <h2>精選影片</h2>
+            <div class="video-grid">
+                <iframe src="https://youtu.be/I-putbJ3T3o?si=jI425O3ra3GuEGEv" title="影片1" allowfullscreen></iframe>
+                <iframe src="https://youtube.com/shorts/3YXSuz6OI-I?si=OoIn_3WytOexAJAO" title="影片2" allowfullscreen></iframe>
+                <iframe src="https://youtube.com/shorts/wM0Yv_oVXfc?si=YJgSegEhDL254xY_" title="影片3" allowfullscreen></iframe>
+            </div>
+        </section>
+        
+        <section class="stats">
+            <h2>我的成就</h2>
+            <ul>
+                <li>YT  50訂閱!!</li>
+                <li>觀看次數10000+</li>
+                <li>觀看小時100+</li>
+            </ul>
+        </section>
     </main>
+    
     <footer>
-        <p>&copy; 2023 Test Website</p>
+        <p>追蹤我的<a href="#">YouTube</a>、<a href="#">Twitch</a>與<a href="#">Twitter</a>。</p>
     </footer>
 </body>
 </html>

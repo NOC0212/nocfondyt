@@ -1,0 +1,113 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+header {
+    background: url('codm-background.jpg') no-repeat center center/cover;
+    text-align: center;
+    padding: 50px 0;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+header h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.stats-overview {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #333333;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 900px;
+    text-align: center;
+}
+
+.stat-item {
+    color: #ffcc00;
+}
+
+.stat-item h2 {
+    margin: 0;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #ffffff;
+}
+
+.announcement {
+    background-color: #444444;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    color: #ffcc00;
+    text-align: center;
+}
+
+.announcement h2 {
+    margin: 0 0 10px;
+    font-size: 1.5rem;
+}
+
+.announcement p {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.videos {
+    margin-top: 20px;
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+}
+
+iframe {
+    width: 100%;
+    height: 200px;
+    border: none;
+}
+
+.stats {
+    margin-top: 20px;
+    background-color: #222222;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.stats h2 {
+    color: #ff6600;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #000000;
+    color: #888888;
+    margin-top: 20px;
+}
+
+footer a {
+    color: #ffcc00;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
