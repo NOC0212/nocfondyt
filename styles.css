@@ -1,59 +1,54 @@
+/* 全域樣式 */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #121212;
     color: #e0e0e0;
+    padding-bottom: 60px;
 }
 
+/* 頁首樣式 */
 header {
-    background-color: #1f1f1f;
-    color: #e0e0e0;
-    padding: 1rem;
+    background: linear-gradient(to right, #1a1a1a, #2d2d2d);
+    padding: 20px 0;
     text-align: center;
-    border-bottom: 2px solid #333;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
 
+header h1 {
+    margin: 0;
+    color: #00ffff;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+/* 導航欄樣式 */
 nav {
-    margin-top: 1rem;
+    margin: 20px 0;
+    padding: 10px;
+    text-align: center;
 }
 
 nav a {
-    color: inherit;
-    margin: 0 0.5rem; /* 稍微分開按鈕 */
+    color: #e0e0e0;
     text-decoration: none;
-    font-weight: normal;
-    position: static;
-    padding: 0.5rem 1rem; /* 添加內邊距 */
-    border: none;
-    border-radius: 0; /* 改成方形 */
-    overflow: visible;
-    transition: background 0.3s, color 0.3s;
-    background: linear-gradient(to right, rgb(138, 43, 226) 25%, rgb(0, 255, 255) 75%); /* 兩個梯形中間漸層效果 */
-}
-
-nav a::before {
-    content: none;
+    margin: 0 15px;
+    padding: 8px 15px;
+    border-radius: 4px;
+    background: linear-gradient(to right, #8a2be2, #00ffff);
+    transition: all 0.3s ease;
 }
 
 nav a:hover {
-    color: #000000; /* 懸停時文字顏色變為黑色 */
-    background: #e0e0e0; /* 懸停時背景顏色變為淺灰色 */
+    opacity: 0.8;
+    transform: scale(1.05);
 }
 
-nav a:hover::before {
-    transform: none;
-}
-
-nav a:active::before {
-    transform: none;
-}
-
+/* 主要內容區塊 */
 main {
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
 }
 
 section {
@@ -126,56 +121,100 @@ form#new-post-form button:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
+/* 頁腳樣式 */
 footer {
-    background-color: #1f1f1f;
-    color: #e0e0e0;
-    text-align: center;
-    padding: 1rem;
     position: fixed;
-    width: 100%;
     bottom: 0;
+    width: 100%;
+    background-color: #1a1a1a;
+    padding: 15px 0;
+    text-align: center;
     border-top: 2px solid #333;
+    box-shadow: 0 -2px 4px rgba(0,0,0,0.3);
 }
 
 button {
-    background: linear-gradient(to right, #6a11cb, #2575fc); /* 亮藍和亮紫色漸層 */
-    border: none;
+    background: linear-gradient(to right, #8a2be2, #00ffff);
     color: white;
     padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
+    border: none;
+    border-radius: 4px;
     cursor: pointer;
-    border-radius: 0; /* 刪除圓角 */
-    transition: background 0.3s ease, color 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 button:hover {
-    background: white; /* 中間變成白色 */
-    color: transparent;
-    background-clip: text;
-    -webkit-background-clip: text;
-    border: 2px solid transparent;
-    background-image: linear-gradient(white, white), linear-gradient(to right, #6a11cb, #2575fc); /* 邊緣漸層 */
-    background-origin: border-box;
-    background-clip: content-box, border-box;
+    opacity: 0.9;
+    transform: scale(1.05);
 }
 
-button::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(to right, #6a11cb, #2575fc);
-    z-index: -1;
-    transition: opacity 0.3s ease;
-    opacity: 0;
+/* 部落格相關樣式 */
+.blog-post-form {
+    background-color: #1f1f1f;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    max-width: 800px;
 }
 
-button:hover::before {
-    opacity: 1;
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    background: #2d2d2d;
+    border: 1px solid #404040;
+    border-radius: 4px;
+    color: #e0e0e0;
+}
+
+.blog-posts {
+    background-color: #1f1f1f;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+.post {
+    background: #2d2d2d;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #8a2be2;
+}
+
+.post-meta {
+    color: #666;
+    font-size: 0.9em;
+    margin-bottom: 15px;
+}
+
+.post-meta span {
+    margin-right: 15px;
+}
+
+.comments {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #404040;
+}
+
+.comment-form textarea {
+    width: 100%;
+    padding: 10px;
+    background: #2d2d2d;
+    border: 1px solid #404040;
+    border-radius: 4px;
+    color: #e0e0e0;
+    margin-bottom: 10px;
 }

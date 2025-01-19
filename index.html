@@ -3,9 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>主頁 - 風城_Noc網站</title>
+    <title>風城_Noc網站</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* 全域樣式 */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #e0e0e0;
+            padding-bottom: 60px;
+        }
+
+        /* 頁首樣式 */
+        header {
+            background: linear-gradient(to right, #1a1a1a, #2d2d2d);
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        header h1 {
+            margin: 0;
+            color: #00ffff;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        /* 導航欄樣式 */
+        nav {
+            margin: 20px 0;
+            padding: 10px;
+        }
+
+        nav a {
+            color: #e0e0e0;
+            text-decoration: none;
+            margin: 0 15px;
+            padding: 8px 15px;
+            border-radius: 4px;
+            background: linear-gradient(to right, #8a2be2, #00ffff);
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            opacity: 0.8;
+            transform: scale(1.05);
+        }
+
+        /* 主要內容區塊 */
+        main {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        section {
+            background-color: #1f1f1f;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        /* 統計區塊樣式 */
+        .statistics {
+            background: linear-gradient(145deg, #1f1f1f, #2d2d2d);
+            border-left: 4px solid #00ffff;
+        }
+
+        .statistics p {
+            margin: 10px 0;
+            font-size: 1.1em;
+            color: #00ffff;
+        }
+
+        /* 文章區塊樣式 */
+        .blog-posts {
+            background-color: #1f1f1f;
+        }
+
+        .post {
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+            background-color: #2d2d2d;
+            border-left: 4px solid #8a2be2;
+        }
+
+        .post-meta {
+            color: #888;
+            font-size: 0.9em;
+            margin: 10px 0;
+        }
+
+        /* 頁腳樣式 */
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #1a1a1a;
+            padding: 15px 0;
+            text-align: center;
+            border-top: 2px solid #333;
+            box-shadow: 0 -2px 4px rgba(0,0,0,0.3);
+        }
+
+        /* 動態效果 */
+        section:hover {
+            transform: translateY(-2px);
+            transition: transform 0.3s ease;
+        }
+
+        h2 {
+            color: #00ffff;
+            border-bottom: 2px solid #8a2be2;
+            padding-bottom: 8px;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -28,9 +144,51 @@
             <h2>最新公告</h2>
             <p>這裡是最新公告的內容。</p>
         </section>
+        <section class="blog-posts">
+            <h2>最新文章</h2>
+            <article class="post">
+                <h3>歡迎來到玩家論壇</h3>
+                <div class="post-meta">
+                    <span class="author">作者：風城_Noc</span>
+                    <span class="date">發布日期：2024-01-01</span>
+                </div>
+                <div class="post-content">
+                    <p>這是我們的論壇首篇文章，歡迎大家在此分享遊戲心得！</p>
+                </div>
+                <div class="comments">
+                    <h4>評論</h4>
+                    <form class="comment-form">
+                        <textarea placeholder="寫下你的評論..." required></textarea>
+                        <button type="submit">送出評論</button>
+                    </form>
+                </div>
+            </article>
+        </section>
+
+        <!-- Discord 連結區塊 -->
+        <section>
+            <p>歡迎加入我們的 <a href="https://discord.gg/zHkN5gEak7" target="_blank">DISCORD</a> 群組!</p>
+        </section>
+
+        <!-- 發文表單移到底部 -->
+        <section class="blog-post-form">
+            <h2>發佈新文章</h2>
+            <form id="blogForm">
+                <div class="form-group">
+                    <label for="title">標題：</label>
+                    <input type="text" id="title" name="title" required>
+                </div>
+                <div class="form-group">
+                    <label for="content">內容：</label>
+                    <textarea id="content" name="content" rows="6" required></textarea>
+                </div>
+                <button type="submit">發佈</button>
+            </form>
+        </section>
     </main>
     <footer>
         <p>&copy; 2023 風城_Noc網站</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
